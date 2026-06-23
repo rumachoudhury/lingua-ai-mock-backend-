@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/app/server.ts",
-    "build": "tsc && tsc-alias",
-    "start": "node dist/app/server.js",
+    "dev": "node api.js && ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/app/server.ts",
+    "build": "node api.js && tsc && tsc-alias",
+    "start": "node api.js && node dist/app/server.js",
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:generate": "npx prisma generate",
     "prisma:studio": "prisma studio",
